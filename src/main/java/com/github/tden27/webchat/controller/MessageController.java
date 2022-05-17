@@ -45,7 +45,7 @@ public class MessageController {
                               @ModelAttribute("message") @Valid Message message,
                               BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "redirect:/chat";
+            return "chat";
         }
         message.setUser(user);
         message.setDatetime(LocalDateTime.now());

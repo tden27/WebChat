@@ -26,7 +26,8 @@
                             <input type="text" class="form-control" placeholder="Text message" aria-label="Text message"
                                    aria-describedby="button-addon2" th:field="*{text}" id="text">
                             <button class="btn btn-primary" type="submit" id="button-addon2">Send</button>
-                            <p class="invalid-feedback" th:if="${#fields.hasErrors('text')}" th:errorclass="error" th:errors="*{text}">TextError</p>
+                        </div>
+                        <div style="color:red" th:if="${#fields.hasErrors('text')}" th:errors="*{text}">Text Error
                         </div>
                     </form>
                 </div>
